@@ -2,6 +2,11 @@ name: Playwright Tests
 on:
   push:
   pull_request:
+
+env:
+  # we call `pnpm playwright install` instead
+  PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: '1'
+
 jobs:
   test:
     runs-on: ubuntu-latest
