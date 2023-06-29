@@ -18,6 +18,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run Playwright tests
+        # BUG: firefox tests fail in container. To fix, we manually set HOME variable: https://github.com/microsoft/playwright/issues/6500#issuecomment-1577284385
         run: env HOME=/root pnpm run test
       - uses: actions/upload-artifact@v3
         if: always()
