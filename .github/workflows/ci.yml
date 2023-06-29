@@ -18,7 +18,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install
       - name: Run Playwright tests
-        run: pnpm run test
+        run: env HOME=/root pnpm run test
       - uses: actions/upload-artifact@v3
         if: always()
         with:
