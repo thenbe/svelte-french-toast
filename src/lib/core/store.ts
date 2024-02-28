@@ -1,6 +1,7 @@
 import { get, writable, type Writable } from 'svelte/store';
 import type { DefaultToastOptions, Toast, ToastType } from './types';
 import writableDerived from 'svelte-writable-derived';
+import { clearTimeout, setTimeout } from 'worker-timers';
 
 const TOAST_LIMIT = 20;
 

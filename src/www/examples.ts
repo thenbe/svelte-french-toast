@@ -1,5 +1,6 @@
 import toast from '../lib';
 import RichContent from './RichContent.svelte';
+import { setTimeout } from 'worker-timers';
 
 export interface Example {
 	title: string;

@@ -6,6 +6,7 @@
 	import Copy from '../www/Copy.svelte';
 	import Examples from '../www/Examples.svelte';
 	import pkg from '../../package.json';
+	import { setTimeout } from 'worker-timers';
 
 	function launchToast() {
 		toast.promise(

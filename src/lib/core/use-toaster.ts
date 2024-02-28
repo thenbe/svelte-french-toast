@@ -2,6 +2,7 @@ import toast from './toast';
 import { endPause as _endPause, startPause as _startPause, update, useToasterStore } from './store';
 import type { Toast, ToastOptions, ToastPosition } from './types';
 import { onDestroy } from 'svelte';
+import { clearTimeout, setTimeout } from 'worker-timers';
 
 function calculateOffset(
 	toast: Toast,
